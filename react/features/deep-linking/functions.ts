@@ -71,7 +71,7 @@ export function getDeepLinkingPage(state: IReduxState) {
             || (isVpaasMeeting(state) && (!appScheme || appScheme === 'com.8x8.meet'))) {
         return Promise.resolve();
     }
-
+    /* disable mobile checking to use the browser directly
     if (isMobileBrowser()) { // mobile
         const mobileAppPromo
             = typeof interfaceConfig === 'object'
@@ -81,7 +81,7 @@ export function getDeepLinkingPage(state: IReduxState) {
             typeof mobileAppPromo === 'undefined' || Boolean(mobileAppPromo)
                 ? DeepLinkingMobilePage : NoMobileApp);
     }
-
+    */
     return _openDesktopApp(state).then(
         // eslint-disable-next-line no-confusing-arrow
         result => result ? DeepLinkingDesktopPage : undefined);
