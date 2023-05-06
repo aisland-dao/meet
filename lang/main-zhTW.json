@@ -60,7 +60,7 @@
     },
     "calendarSync": {
         "addMeetingURL": "增加會議連結",
-        "confirmAddLink": "您要為此活動加入 Jitsi 連結嗎？",
+        "confirmAddLink": "您要為此活動加入 Aisland 連結嗎？",
         "error": {
             "appConfiguration": "行事曆整合尚未正確設定。",
             "generic": "發生錯誤，請檢查行事曆設定，或是重新整理行事曆。",
@@ -444,7 +444,7 @@
         "answer": "接通",
         "audioCallTitle": "來電",
         "decline": "拒接",
-        "productLabel": "來自 Jitsi Meet",
+        "productLabel": "來自 Aisland Meet",
         "videoCallTitle": "視訊來電"
     },
     "info": {
@@ -695,7 +695,7 @@
         "noiseSuppressionFailedTitle": "啟用雜訊抑制失敗",
         "noiseSuppressionNoTrackDescription": "請先解除麥克風的靜音。",
         "noiseSuppressionStereoDescription": "目前不支援立體聲降噪功能。",
-        "oldElectronClientDescription1": "您似乎正在使用存在已知安全漏洞的過時 Jitsi Meet 用戶端，請盡快更新到最新版本！",
+        "oldElectronClientDescription1": "您似乎正在使用存在已知安全漏洞的過時 Aisland Meet 用戶端，請盡快更新到最新版本！",
         "oldElectronClientDescription2": "",
         "oldElectronClientDescription3": "",
         "participantWantsToJoin": "想要加入會議",
@@ -1338,15 +1338,15 @@
         "go": "開始",
         "goSmall": "開始",
         "headerSubtitle": "安全且高品質的視訊會議",
-        "headerTitle": "Jitsi Meet",
+        "headerTitle": "Aisland Meet",
         "info": "資訊",
-        "jitsiOnMobile": "Jitsi 手機應用程式 – 下載應用程式，不論何時何地都能發起會議",
+        "jitsiOnMobile": "Aisland 手機應用程式 – 下載應用程式，不論何時何地都能發起會議",
         "join": "建立/加入",
         "logo": {
             "calendar": "行事曆圖示",
             "desktopPreviewThumbnail": "桌面預覽縮圖",
             "googleLogo": "Google 圖示",
-            "logoDeepLinking": "Jitsi Meet 圖示",
+            "logoDeepLinking": "Aisland Meet 圖示",
             "microsoftLogo": "Microsoft 圖示",
             "policyLogo": "政策圖示"
         },

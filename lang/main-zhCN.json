@@ -60,7 +60,7 @@
     },
     "calendarSync": {
         "addMeetingURL": "添加会议链接",
-        "confirmAddLink": "是否在此事件中添加Jitsi链接",
+        "confirmAddLink": "是否在此事件中添加Aisland链接",
         "error": {
             "appConfiguration": "日历整合没有正确配置。",
             "generic": "发生错误，请检查日历设置或尝试刷新日历。",
@@ -444,7 +444,7 @@
         "answer": "接听",
         "audioCallTitle": "来电",
         "decline": "拒听",
-        "productLabel": "来自 Jitsi Meet",
+        "productLabel": "来自 Aisland Meet",
         "videoCallTitle": "视频通话"
     },
     "info": {
@@ -695,7 +695,7 @@
         "noiseSuppressionFailedTitle": "无法开启噪音抑制",
         "noiseSuppressionNoTrackDescription": "请先解除麦克风的静音。",
         "noiseSuppressionStereoDescription": "暂不支持对立体声音频开启噪音抑制。",
-        "oldElectronClientDescription1": "你似乎正在使用存在已知安全漏洞的旧版Jitsi Meet客户端，请尽快更新到最新版本!",
+        "oldElectronClientDescription1": "你似乎正在使用存在已知安全漏洞的旧版Aisland Meet客户端，请尽快更新到最新版本!",
         "oldElectronClientDescription2": "",
         "oldElectronClientDescription3": "",
         "participantWantsToJoin": "想加入会议",
@@ -1338,15 +1338,15 @@
         "go": "开始",
         "goSmall": "开始",
         "headerSubtitle": "安全且高品质的会议",
-        "headerTitle": "Jitsi Meet",
+        "headerTitle": "Aisland Meet",
         "info": "信息",
-        "jitsiOnMobile": "手机版Jitsi – 下载我们的APP，随时随地都能开始会议",
+        "jitsiOnMobile": "手机版Aisland – 下载我们的APP，随时随地都能开始会议",
         "join": "创建/加入",
         "logo": {
             "calendar": "日历图标",
             "desktopPreviewThumbnail": "桌面预览缩略图",
             "googleLogo": "谷歌图标",
-            "logoDeepLinking": "Jitsi Meet图标",
+            "logoDeepLinking": "Aisland Meet图标",
             "microsoftLogo": "微软图标",
             "policyLogo": "政策图标"
         },
