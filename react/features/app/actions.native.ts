@@ -1,4 +1,3 @@
-/* eslint-disable lines-around-comment */
 import { setRoom } from '../base/conference/actions';
 import {
     configWillLoad,
@@ -13,6 +12,7 @@ import {
 import { connect, disconnect, setLocationURL } from '../base/connection/actions';
 import { loadConfig } from '../base/lib-jitsi-meet/functions.native';
 import { createDesiredLocalTracks } from '../base/tracks/actions';
+import isInsecureRoomName from '../base/util/isInsecureRoomName';
 import { parseURLParams } from '../base/util/parseURLParams';
 import {
     appendURLParam,
@@ -20,14 +20,11 @@ import {
     parseURIString,
     toURLString
 } from '../base/util/uri';
-// @ts-ignore
 import { isPrejoinPageEnabled } from '../mobile/navigation/functions';
 import {
     goBackToRoot,
     navigateRoot
-    // @ts-ignore
 } from '../mobile/navigation/rootNavigationContainerRef';
-// @ts-ignore
 import { screen } from '../mobile/navigation/routes';
 import { clearNotifications } from '../notifications/actions';
 
@@ -55,7 +52,7 @@ export function appNavigate(uri?: string, options: IReloadNowOptions = {}) {
 
         // If the specified location (URI) does not identify a host, use the app's
         // default.
-        if (!location || !location.host) {
+        if (!location?.host) {
             const defaultLocation = parseURIString(getDefaultURL(getState));
 
             if (location) {
@@ -140,10 +137,14 @@ export function appNavigate(uri?: string, options: IReloadNowOptions = {}) {
         dispatch(setRoom(room));
 
         if (room) {
+            if (isInsecureRoomName(room)) {
+                navigateRoot(screen.unsafeRoomWarning);
+
+                return;
+            }
             dispatch(createDesiredLocalTracks());
             dispatch(clearNotifications());
 
-            // @ts-ignore
             const { hidePrejoin } = options;
 
             if (!hidePrejoin && isPrejoinPageEnabled(getState())) {

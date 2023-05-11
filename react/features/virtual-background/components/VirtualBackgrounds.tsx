@@ -1,7 +1,7 @@
-// @ts-ignore
+// @ts-expect-error
 import Bourne from '@hapi/bourne';
 // eslint-disable-next-line lines-around-comment
-// @ts-ignore
+// @ts-expect-error
 import { jitsiLocalStorage } from '@jitsi/js-utils/jitsi-local-storage';
 import React, { useCallback, useEffect, useState } from 'react';
 import { WithTranslation } from 'react-i18next';
@@ -30,11 +30,6 @@ interface IProps extends WithTranslation {
      * The list of Images to choose from.
      */
     _images: Array<Image>;
-
-    /**
-     * Returns the jitsi track that will have background effect applied.
-     */
-    _jitsiTrack: Object;
 
     /**
      * The current local flip x status.
@@ -83,6 +78,11 @@ interface IProps extends WithTranslation {
      * Returns the selected thumbnail identifier.
      */
     selectedThumbnail: string;
+
+    /**
+     * The id of the selected video device.
+     */
+    selectedVideoInputId: string;
 }
 
 const onError = (event: any) => {
@@ -204,7 +204,6 @@ const useStyles = makeStyles()(theme => {
  */
 function VirtualBackgrounds({
     _images,
-    _jitsiTrack,
     _localFlipX,
     selectedThumbnail,
     _showUploadButton,
@@ -212,6 +211,7 @@ function VirtualBackgrounds({
     onOptionsChange,
     options,
     initialOptions,
+    selectedVideoInputId,
     t
 }: IProps) {
     const { classes, cx } = useStyles();
@@ -364,7 +364,8 @@ function VirtualBackgrounds({
         <>
             <VirtualBackgroundPreview
                 loadedPreview = { loadedPreviewState }
-                options = { options } />
+                options = { options }
+                selectedVideoInputId = { selectedVideoInputId } />
             {loading ? (
                 <div className = { classes.virtualBackgroundLoading }>
                     <Spinner />
